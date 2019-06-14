@@ -29,6 +29,7 @@ public class DataChecker {
         System.arraycopy(arr, 0, arr1, 0, arr.length);
 
         Arrays.sort(arr);
+        BubboSort.sort(arr1);
 
         Boolean same = true;
         for (int i = 0; i < arr1.length; i++) {
