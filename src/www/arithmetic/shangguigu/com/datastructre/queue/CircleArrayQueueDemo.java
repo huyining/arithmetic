@@ -1,6 +1,4 @@
-package www.arithmetic.shangguigu.com.queue;
-
-import com.sun.org.apache.xpath.internal.operations.Bool;
+package www.arithmetic.shangguigu.com.datastructre.queue;
 
 /**
  * 数组实现的队列
@@ -8,9 +6,9 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
  * @author: huyining
  * @since :    2019-06-17
  */
-public class ArrayQueueDemo {
+public class CircleArrayQueueDemo {
 
-    class ArrayQueue {
+    class CircleArray {
 
         private int maxSize;
 
@@ -20,10 +18,8 @@ public class ArrayQueueDemo {
 
         private int[] arr;
 
-        public ArrayQueue(int maxSize) {
+        public CircleArray(int maxSize) {
             this.maxSize = maxSize;
-            this.front = -1;
-            this.rear = -1;
             arr = new int[maxSize];
         }
 
@@ -33,7 +29,7 @@ public class ArrayQueueDemo {
          * @return
          */
         public Boolean isFull() {
-            return rear == maxSize - 1;
+            return (rear + 1) % maxSize == front;
         }
 
         /**
@@ -57,8 +53,8 @@ public class ArrayQueueDemo {
                 return;
             }
 
-            rear++;
             arr[rear] = n;
+            rear = (rear + 1) % maxSize;
         }
 
         /**
@@ -72,8 +68,9 @@ public class ArrayQueueDemo {
                 throw new RuntimeException("队列为空,无法获取到元素......");
             }
 
-            front++;
-            return arr[front];
+            int value = arr[front];
+            front = (front + 1) % maxSize;
+            return value;
         }
 
         /**
@@ -86,8 +83,20 @@ public class ArrayQueueDemo {
             }
 
             for (int i = 0; i < maxSize; i++) {
-                System.out.printf("arr[%d]=%d\n", i, arr[i]);
+                System.out.printf("arr[%d]=%d\n", i % maxSize, arr[i % maxSize]);
             }
+        }
+
+        /**
+         * 获取当前对列有效数据的个数
+         *
+         * @return
+         */
+        public int size() {
+            // rear = 2
+            // front = 1
+            // maxSize = 3
+            return (rear + maxSize - front) % maxSize;
         }
 
         /**

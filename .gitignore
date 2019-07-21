@@ -1,6 +1,38 @@
-*.target
+.DS_Store
+**/build/
+**/classes/
+*.class
+# ide
+.idea/
 *.iml
-*.target
-*.idea
-workspace.xml
+.settings/
+.project
+.classpath
+# gradle
+.gradle/
+# logs
+**/logs/
 *.log
+# node
+**/node_modules/
+# codegen
+## swagger
+api/gensrc
+api/src/docs/asciidoc/generated/
+api/src/main/resources/static/docs/
+admin/src/main/resources/application-local.properties
+## vue
+admin/src/main/resources/static/app.css
+admin/src/main/resources/static/app.js
+admin/src/main/resources/static/vendor.js
+admin/src/main/resources/static/static/
+admin/src/main/resources/templates/index.ftl
+classes/
+target/
+application-local.yml
+.gradletasknamecache
+.idea
+api/src/main/resources/application-local.properties
+out
+dump.rdb
+application-ut-local.properties

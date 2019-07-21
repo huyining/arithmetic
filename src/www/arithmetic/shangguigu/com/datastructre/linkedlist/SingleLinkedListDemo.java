@@ -1,4 +1,4 @@
-package www.arithmetic.shangguigu.com.linkedlist;
+package www.arithmetic.shangguigu.com.datastructre.linkedlist;
 
 /**
  * 单链表

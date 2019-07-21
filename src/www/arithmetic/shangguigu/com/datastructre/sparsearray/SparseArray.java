@@ -1,4 +1,4 @@
-package www.arithmetic.shangguigu.com.sparsearray;
+package www.arithmetic.shangguigu.com.datastructre.sparsearray;
 
 /**
  * 稀疏数组
