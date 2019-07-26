@@ -4,20 +4,20 @@ package www.arithmetic.imooc.com.arrays.ownarray;
  * @author: huyining
  * @since :    2019-07-23
  */
-public class Array {
+public class OwnArray {
 
     private int[] data;
 
     private int size;
 
     // 构造函数 根据传入的大小构建数组
-    public Array(int capacity) {
+    public OwnArray(int capacity) {
         data = new int[capacity];
         size = 0;
     }
 
     // 无参构造  默认大小为10
-    public Array() {
+    public OwnArray() {
         this(10);
     }
 
