@@ -1,8 +1,5 @@
 package www.arithmetic.imooc.com.binsertree;
 
-import com.sun.tools.hat.internal.model.Root;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -262,6 +259,127 @@ public class BinarySearchTree<E extends Comparable<E>> {
         return maxmum(node.right);
     }
 
+    /**
+     * 删除树中最小值 并返回删除的元素
+     *
+     * @return
+     */
+    public E removeMin() {
+        E e = minimum();
+        root = removeMin(root);
+        return e;
+    }
+
+    /**
+     * 删除书中最小值 返回删除节点后新的二分收索树的根
+     *
+     * @param node
+     * @return
+     */
+    private Node removeMin(Node node) {
+        //  最小值在左边
+        if (node.left == null) {
+            // 如果没有最小值的化 有右节点的话 拿到右节点
+            // 右节点设置为null  返回拿到的右节点 作为新原来节点的左节点
+            Node rightNode = node.right;
+            node.right = null;
+            size--;
+            return rightNode;
+        }
+
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    /**
+     * 删除树中最大值  并返回删除的元素
+     *
+     * @return
+     */
+    public E removeMax() {
+        E e = maxmum();
+        root = removeMax(root);
+        return e;
+    }
+
+    /**
+     * 删除树中最大值
+     *
+     * @param node
+     * @return
+     */
+    private Node removeMax(Node node) {
+        if (node.right == null) {
+            Node leftNode = node.left;
+            node.left = null;
+            size--;
+            return leftNode;
+        }
+        node.right = removeMax(node.right);
+        return node;
+    }
+
+    /**
+     * 删除元素为E的节点
+     *
+     * @param e
+     */
+    public void remove(E e) {
+        root = remove(root, e);
+    }
+
+    /**
+     * 删除元数为E的节点
+     * 返回删除节点后新的节点的根
+     *
+     * @param node
+     * @param e
+     */
+    private Node remove(Node node, E e) {
+        if (node == null) {
+            return null;
+        }
+
+        // node.e要大于e, 所以像node的左边进行遍历
+        if (e.compareTo(node.e) < 0) {
+            node.left = remove(node.left, e);
+            return node;
+        }
+        // 当前的节点要比查找的元素小 就往右找
+        else if (e.compareTo(node.e) > 0) {
+            node.right = remove(node.right, e);
+            return node;
+        }
+
+        // 删除的节点和当前节点相等
+        // 判断是否有左右子节点
+        else {
+            // 如果待删除的节点左子树为空的话
+            if (node.left == null) {
+                Node rightNode = node.right;
+                node.right = null;
+                size--;
+                return rightNode;
+            }
+
+            // 如果待删除的节点右子树为空的话
+            if (node.right == null) {
+                Node leftNode = node.left;
+                node.left = null;
+                size--;
+                return leftNode;
+            }
+
+            // 当待删除的节点的左右节点都不为空的情况下
+            // 找到比待删除节点大的最小节点, 然后代替当前节点的位置
+            Node successor = minimum(node.right);
+            successor.right = removeMin(node.right);
+            successor.left = node.left;
+
+            node.left = node.right = null;
+            return  successor;
+        }
+    }
 
     /**
      * 打印二分树

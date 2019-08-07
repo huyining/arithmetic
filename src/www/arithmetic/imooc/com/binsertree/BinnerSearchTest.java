@@ -33,11 +33,15 @@ public class BinnerSearchTest {
         // bst.levelOrder();
         System.out.println();
 
-        Integer minimum = bst.minimum();
-        System.out.println(minimum);
+        // Integer minimum = bst.minimum();
+        // System.out.println(minimum);
 
 
-        Integer maxmum = bst.maxmum();
-        System.out.println(maxmum);
+        // Integer maxmum = bst.maxmum();
+        //System.out.println(maxmum);
+
+        Integer removeMax = bst.removeMax();
+        System.out.println(removeMax);
+        System.out.println(bst);
     }
 }
