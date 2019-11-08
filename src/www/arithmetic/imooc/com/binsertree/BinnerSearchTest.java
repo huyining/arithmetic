@@ -24,7 +24,7 @@ public class BinnerSearchTest {
         // bst.preOrder();
         System.out.println();
 
-        // bst.inOrder();
+        bst.inOrder();
         System.out.println();
 
         // bst.postOrder();
@@ -40,8 +40,8 @@ public class BinnerSearchTest {
         // Integer maxmum = bst.maxmum();
         //System.out.println(maxmum);
 
-        Integer removeMax = bst.removeMax();
-        System.out.println(removeMax);
-        System.out.println(bst);
+//        Integer removeMax = bst.removeMax();
+//        System.out.println(removeMax);
+//        System.out.println(bst);
     }
 }

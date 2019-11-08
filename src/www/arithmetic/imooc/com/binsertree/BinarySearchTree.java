@@ -156,8 +156,10 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
 
         inOrder(node.left);
-        System.out.println(node.e);
+        System.out.print(node.e + ",");
         inOrder(node.right);
+
+        System.out.println();
     }
 
     /**
