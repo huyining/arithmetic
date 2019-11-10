@@ -71,7 +71,7 @@ public class Nibolan {
 //        }
 //        return stakeInteger.pop();
 //    }
-    
+
     public int evalRPN(String[] tokens) {
         Stack<Integer> stakeInteger = new Stack<>();
         for (String token : tokens) {

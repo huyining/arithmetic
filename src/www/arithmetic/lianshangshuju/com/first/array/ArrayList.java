@@ -38,6 +38,9 @@ public class ArrayList<E> {
         for (int i = 0; i < size; i++) {
             elements[i] = null;
         }
+
+        // 或者直接让size==0 后面获取元素的时候需要做size校验
+        // 所以不会拿到数据的
         size = 0;
     }
 
@@ -113,7 +116,7 @@ public class ArrayList<E> {
         rangeCheck(index);
 
         E oldElement = elements[index];
-        for (int i = index + 1; i < size; ) {
+        for (int i = index + 1; i < size; i++) {
             // 将index+1位置的元素给index  并将后面的往前移动
             elements[i - 1] = elements[i];
         }
