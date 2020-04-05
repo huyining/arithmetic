@@ -1,6 +1,5 @@
 package www.arithmetic.imooc.com.queue;
 
-import java.util.Objects;
 
 /**
  * 队列
