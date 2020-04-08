@@ -1,6 +1,5 @@
 package www.arithmetic.lianshangshuju.com.first.linklist.bothway;
 
-import sun.tools.jconsole.inspector.XNodeInfo;
 import www.arithmetic.lianshangshuju.com.first.linklist.AbstractList;
 
 
@@ -98,7 +97,7 @@ public class BothWayLinkList<E> extends AbstractList<E> {
         // 往链表尾部添加元素
         if (index == size) {
             Node<E> oldLast = last;
-            last = new Node<>(last, element, null);
+            last = new Node<>(oldLast, element, null);
             // 如果链表中没有节点  这就是第一个节点
             if (oldLast == null) {
                 first = last;
@@ -120,6 +119,7 @@ public class BothWayLinkList<E> extends AbstractList<E> {
                 prev.next = node;
             }
         }
+        size ++;
     }
 
     /**
