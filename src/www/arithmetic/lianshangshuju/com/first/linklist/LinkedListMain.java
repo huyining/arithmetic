@@ -4,7 +4,7 @@ package www.arithmetic.lianshangshuju.com.first.linklist;
 import www.arithmetic.lianshangshuju.com.first.linklist.bothway.BothWayLinkList;
 import www.arithmetic.lianshangshuju.com.first.linklist.circle.CircleLinkedList;
 
-public class Main {
+public class LinkedListMain {
 
     static void testList(List<Integer> list) {
         list.add(11);
