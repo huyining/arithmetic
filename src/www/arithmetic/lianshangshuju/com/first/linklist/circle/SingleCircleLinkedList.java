@@ -1,7 +1,6 @@
 package www.arithmetic.lianshangshuju.com.first.linklist.circle;
 
-import sun.tools.jconsole.inspector.XNodeInfo;
-import www.arithmetic.lianshangshuju.com.first.linklist.AbstractList;
+import www.arithmetic.lianshangshuju.com.first.linklist.base.AbstractList;
 
 /**
  * 单向环形链表
