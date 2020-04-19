@@ -1,4 +1,4 @@
-package www.arithmetic.lianshangshuju.com.first.linklist.base;
+package www.arithmetic.lianshangshuju.com.first.base;
 
 /**
  * 链表接口

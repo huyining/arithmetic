@@ -1,6 +1,8 @@
 package www.arithmetic.lianshangshuju.com.first.stack;
 
 
+import www.arithmetic.lianshangshuju.com.first.base.List;
+
 /**
  * @author : huyining
  * @since :  2020/4/12

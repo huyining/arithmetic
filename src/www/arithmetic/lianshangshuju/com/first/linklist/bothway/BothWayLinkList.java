@@ -1,6 +1,6 @@
 package www.arithmetic.lianshangshuju.com.first.linklist.bothway;
 
-import www.arithmetic.lianshangshuju.com.first.linklist.base.AbstractList;
+import www.arithmetic.lianshangshuju.com.first.base.AbstractList;
 
 
 /**

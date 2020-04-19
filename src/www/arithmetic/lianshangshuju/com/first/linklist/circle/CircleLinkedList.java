@@ -1,6 +1,6 @@
 package www.arithmetic.lianshangshuju.com.first.linklist.circle;
 
-import www.arithmetic.lianshangshuju.com.first.linklist.base.AbstractList;
+import www.arithmetic.lianshangshuju.com.first.base.AbstractList;
 
 /**
  * 环形链表处理约瑟夫问题

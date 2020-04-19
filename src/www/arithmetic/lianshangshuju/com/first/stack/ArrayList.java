@@ -1,5 +1,7 @@
 package www.arithmetic.lianshangshuju.com.first.stack;
 
+import www.arithmetic.lianshangshuju.com.first.base.AbstractList;
+
 @SuppressWarnings("unchecked")
 public class ArrayList<E> extends AbstractList<E> {
 	/**
