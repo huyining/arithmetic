@@ -20,6 +20,18 @@ public class ReverseLinkedList_206 {
 
     }
 
+    public ListNode reverseList3(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode newHead = reverseList3(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+
+
     public ListNode reverseList2(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -34,4 +46,22 @@ public class ReverseLinkedList_206 {
         }
         return newHead;
     }
+
+
+    public ListNode reverseList4(ListNode head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode newHead = null;
+        while (head != null) {
+            ListNode temp = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = temp;
+        }
+        return newHead;
+    }
+
 }
